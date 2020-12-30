@@ -1,0 +1,15 @@
+
+<h2>Users</h2>
+
+<app-user-list [user]="selectedUser"></app-user-list>
+
+<ul class="heroes">
+  <li *ngFor="let user of users"
+    [class.selected]="user === selectedUser"
+    (click)="onSelect(user)">
+    <span class="badge">{{user.id}}</span> {{user.name}}
+  </li>
+</ul>
+
+
+
